@@ -144,10 +144,12 @@ jobs:
       - name: "Build LTeX LS"
         run: "mvn -B -e verify"
 
-      - name: "Upload Coverage Report to Coveralls"
-        env:
-          LTEX_LS_COVERALLS_REPOSITORY_TOKEN: "${{ secrets.LTEX_LS_COVERALLS_REPOSITORY_TOKEN }}"
-        run: "mvn -B -e coveralls:report \"-DrepoToken=$LTEX_LS_COVERALLS_REPOSITORY_TOKEN\""
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2.2.3
+      # - name: "Upload Coverage Report to Coveralls"
+      #   env:
+      #     LTEX_LS_COVERALLS_REPOSITORY_TOKEN: "${{ secrets.LTEX_LS_COVERALLS_REPOSITORY_TOKEN }}"
+      #   run: "mvn -B -e coveralls:report \"-DrepoToken=$LTEX_LS_COVERALLS_REPOSITORY_TOKEN\""
 
   deploy:
     name: "CI - Deploy Job"
