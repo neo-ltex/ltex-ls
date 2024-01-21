@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest'
-import { getPackageInfo } from './get_package_info.js'
 import pkg from '../package.json' with { type: 'json' }
+import { getPackageInfo } from './get_package_info.js'
 
 it('gets version from package.json', () => {
 	expect(getPackageInfo().version).toEqual(pkg.version)

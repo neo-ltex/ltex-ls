@@ -1,8 +1,8 @@
 {
 	"recommendations": [
 		"aaron-bond.better-comments",
+		"biomejs.biome",
 		"davidanson.vscode-markdownlint",
-		"dbaeumer.vscode-eslint",
 		"editorconfig.editorconfig",
 		"github.vscode-pull-request-github",
 		"mathiasfrohlich.kotlin",

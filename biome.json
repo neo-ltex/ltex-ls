@@ -1,0 +1,7 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.5.2/schema.json",
+	"extends": ["./recommended.json"],
+	"files": {
+		"include": ["ts/**/*"]
+	}
+}
