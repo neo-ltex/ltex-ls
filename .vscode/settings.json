@@ -3,5 +3,8 @@
 		"ltex",
 		"valentjn"
 	],
+	"githubPullRequests.remotes": [
+		"origin"
+	],
 	"java.compile.nullAnalysis.mode": "automatic"
 }
