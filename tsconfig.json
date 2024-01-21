@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"useDefineForClassFields": true,
+		"verbatimModuleSyntax": true,
+		"module": "NodeNext",
+		"outDir": "esm",
+		"resolveJsonModule": true,
+		"rootDir": "ts",
+		"strict": true
+	},
+	"include": [
+		"ts"
+	]
+}
