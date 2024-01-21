@@ -1,3 +1,4 @@
+import assert from 'node:assert'
 import { dirname } from 'dirname-filename-esm'
 import path from 'node:path'
 import fs from 'node:fs'
@@ -19,5 +20,6 @@ export function getLanguageToolVersion() {
 		(d) =>
 			d.groupId === 'org.languagetool' && d.artifactId === 'languagetool-core'
 	)
-	return langTool?.version
+	assert(langTool, "Unable to find org.languagetool > languagetool-core")
+	return langTool.version
 }
