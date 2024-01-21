@@ -1,0 +1,48 @@
+{
+  "name": "@neo-ltex/ltex-ls-meta",
+  "version": "16.0.0",
+  "description": "metadata for https://github.com/neo-ltex/ltex-ls",
+  "keywords": [],
+  "homepage": "https://github.com/neo-ltex/ltex-ls#readme",
+  "bugs": {
+    "url": "https://github.com/neo-ltex/ltex-ls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neo-ltex/ltex-ls.git"
+  },
+  "license": "MPL-2.0",
+  "author": {
+    "name": "Homa Wong (unional)",
+    "email": "homawong@gmail.com"
+  },
+  "type": "module",
+  "exports": {
+    "types": "./esm/index.d.ts",
+    "import": "./esm/index.js"
+  },
+  "main": "./cjs/index.js",
+  "types": "./esm/index.d.ts",
+  "files": [
+    "cjs",
+    "esm",
+    "ts",
+    "!**/*.{spec,test,unit,accept,integrate,system,perf,stress}.*"
+  ],
+  "scripts": {
+    "build": "python tools/createCompletionLists.py && mvn verify",
+    "build:cjs": "swc ts -d cjs",
+    "build:esm": "tsc",
+    "test": "vitest run",
+    "w": "vitest"
+  },
+  "devDependencies": {
+    "@octokit/rest": "^20.0.2",
+    "@swc/cli": "^0.1.63",
+    "@swc/core": "^1.3.104",
+    "cachedir": "^2.4.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  },
+  "packageManager": "pnpm@8.14.1"
+}

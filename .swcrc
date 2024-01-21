@@ -1,0 +1,16 @@
+{
+	"$schema": "https://json.schemastore.org/swcrc.json",
+	"jsc": {
+		"parser": {
+			"syntax": "typescript"
+		},
+		"target": "es2022"
+	},
+	"module": {
+		"type": "commonjs"
+	},
+	"exclude": [
+    ".*\\.spec\\.ts$",
+    ".*\\.unit\\.ts$"
+	]
+}
