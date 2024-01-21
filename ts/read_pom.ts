@@ -5,6 +5,7 @@ import path from 'node:path'
 
 export type Pom = {
 	project: {
+		version: string
 		dependencies: {
 			dependency: Array<{
 				artifactId: string

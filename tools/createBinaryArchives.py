@@ -17,13 +17,14 @@ import urllib.parse
 import urllib.request
 import zipfile
 
-javaVersion = "11.0.12+7"
+javaVersion = "11.0.22+7"
 
 
 
 def createBinaryArchive(platform: str, arch: str) -> None:
   print(f"Processing platform/arch '{platform}/{arch}'...")
   ltexLsVersion = getLtexLsVersion()
+  print(f"ltex {ltexLsVersion}")
   targetDirPath = pathlib.Path(__file__).parent.parent.joinpath("target")
   ltexLsArchivePath = pathlib.Path(__file__).parent.parent.joinpath(
       targetDirPath, f"ltex-ls-{ltexLsVersion}.tar.gz")
