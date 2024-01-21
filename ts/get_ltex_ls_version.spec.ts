@@ -1,8 +1,8 @@
 import { expect, it } from 'vitest'
+import { getLtexLsVersion } from './index.js'
 import { readPom } from './read_pom.js'
-import { getLtexLsVersion } from './get_ltex_ls_version.js'
 
 it('gets the version from pom', () => {
 	const pom = readPom()
-	expect(getLtexLsVersion(pom)).toEqual(pom.project.version)
+	expect(getLtexLsVersion()).toEqual(pom.project.version)
 })

@@ -27,6 +27,7 @@
     "cjs",
     "esm",
     "ts",
+    "./pom.xml",
     "!**/*.{spec,test,unit,accept,integrate,system,perf,stress}.*"
   ],
   "scripts": {

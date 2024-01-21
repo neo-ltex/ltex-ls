@@ -1,5 +1,6 @@
-import type { Pom } from './read_pom.js'
+import { ctx } from './ctx.js'
 
-export function getLtexLsVersion(pom: Pom) {
+export function getLtexLsVersion() {
+	const pom = ctx.readPom()
 	return pom.project.version
 }

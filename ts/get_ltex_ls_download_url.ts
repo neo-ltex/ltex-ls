@@ -3,8 +3,7 @@ import { ctx } from './ctx.js'
 import { getLtexLsVersion } from './get_ltex_ls_version.js'
 
 export async function getLtexLsDownloadUrl(platform: 'windows' | 'linux' | 'mac', arch: 'x64' = 'x64') {
-	const pom = ctx.readPom()
-	const version = getLtexLsVersion(pom)
+	const version = getLtexLsVersion()
 	const regex = new RegExp(`ltex-ls-${version}-${platform}-${arch}`)
 
 	const release = await ctx.getLtexLsLatestRelease()
