@@ -1,11 +1,19 @@
 {
-	"cSpell.words": [
-		"biomejs",
-		"ltex",
-		"valentjn"
-	],
-	"githubPullRequests.remotes": [
-		"origin"
-	],
+	"[json]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"cSpell.words": ["biomejs", "ltex", "valentjn"],
+	"githubPullRequests.remotes": ["origin"],
 	"java.compile.nullAnalysis.mode": "automatic"
 }
