@@ -6,7 +6,7 @@ import { XMLParser } from 'fast-xml-parser'
 export function getLanguageToolVersion() {
 	const pomXML = fs.readFileSync(
 		path.join(dirname(import.meta), '../pom.xml'),
-		'utf-8',
+		'utf-8'
 	)
 	const parser = new XMLParser({ parseTagValue: false })
 	const pom = parser.parse(pomXML)
@@ -17,7 +17,7 @@ export function getLanguageToolVersion() {
 	}> = pom.project.dependencies.dependency
 	const langTool = dependencies.find(
 		(d) =>
-			d.groupId === 'org.languagetool' && d.artifactId === 'languagetool-core',
+			d.groupId === 'org.languagetool' && d.artifactId === 'languagetool-core'
 	)
 	return langTool?.version
 }

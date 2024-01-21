@@ -4,7 +4,7 @@ const octokit = new Octokit()
 
 const latestRelease = await octokit.rest.repos.getLatestRelease({
 	owner: 'neo-ltex',
-	repo: 'languagetool-mirror',
+	repo: 'languagetool-mirror'
 })
 
 console.log(latestRelease)
