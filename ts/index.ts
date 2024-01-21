@@ -1,10 +1,1 @@
-import { Octokit } from '@octokit/rest'
-
-const octokit = new Octokit()
-
-const latestRelease = await octokit.rest.repos.getLatestRelease({
-	owner: 'neo-ltex',
-	repo: 'languagetool-mirror'
-})
-
-console.log(latestRelease)
+export * from './get_ltex_ls_download_url.js'
