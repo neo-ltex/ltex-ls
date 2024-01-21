@@ -1,4 +1,7 @@
 {
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
 	"[json]": {
 		"editor.quickSuggestions": {
 			"strings": true
