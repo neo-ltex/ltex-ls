@@ -1,12 +1,15 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.5.2/schema.json",
 	"organizeImports": {
-		"enabled": true
+		"enabled": false
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"correctness": {
+				"noUnusedVariables": "error"
+			}
 		}
 	},
 	"formatter": {
@@ -14,9 +17,29 @@
 	},
 	"javascript": {
 		"formatter": {
+			"indentStyle": "tab",
+			"lineEnding": "lf",
+			"lineWidth": 120,
 			"quoteStyle": "single",
 			"semicolons": "asNeeded",
 			"trailingComma": "none"
 		}
-	}
+	},
+	"json": {
+		"parser": {
+			"allowComments": false,
+			"allowTrailingCommas": false
+		}
+	},
+	"overrides": [
+		{
+			"include": ["\\.vscode[//].*json", "tsconfig.*json"],
+			"json": {
+				"parser": {
+					"allowComments": true,
+					"allowTrailingCommas": true
+				}
+			}
+		}
+	]
 }
