@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"github.vscode-pull-request-github",
+		"pflannery.vscode-versionlens",
+		"aaron-bond.better-comments",
+		"davidanson.vscode-markdownlint",
+		"dbaeumer.vscode-eslint",
+		"editorconfig.editorconfig",
+		"unional.vscode-sort-package-json",
+		"yzhang.markdown-all-in-one",
+	]
+}
