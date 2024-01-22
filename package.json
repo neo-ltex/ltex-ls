@@ -31,15 +31,17 @@
 		"!**/*.{spec,test,unit,accept,integrate,system,perf,stress}.*"
 	],
 	"scripts": {
-		"build": "python tools/createCompletionLists.py && mvn verify",
+		"build": "run-p build:cjs build:esm",
 		"build:cjs": "swc ts -d cjs",
 		"build:esm": "tsc",
+		"build:completion-list": "python tools/createCompletionLists.py && mvn verify",
 		"check": "biome check .",
 		"coverage": "vitest run --coverage",
 		"format": "biome format . --write",
 		"lint": "biome lint .",
 		"test": "vitest run",
-		"w": "vitest"
+		"w": "vitest",
+		"verify": "npm-run-all -p check build coverage"
 	},
 	"dependencies": {
 		"@repobuddy/biome": "^1.0.1"
@@ -54,6 +56,7 @@
 		"cachedir": "^2.4.0",
 		"dirname-filename-esm": "^1.1.1",
 		"fast-xml-parser": "^4.3.3",
+		"npm-run-all": "^4.1.5",
 		"typescript": "^5.3.3",
 		"vitest": "^1.2.1"
 	},
