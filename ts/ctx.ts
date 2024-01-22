@@ -1,9 +1,9 @@
 import { Octokit } from '@octokit/rest'
 import cachedir from 'cachedir'
-import fs from 'node:fs'
-import { rimrafSync } from 'rimraf'
-import tar from 'tar'
 import unzip from 'extract-zip'
+import { existsSync, mkdirSync } from 'node:fs'
+import { rimrafSync } from 'rimraf'
+import { extract } from 'tar'
 import { getLtexLsLatestRelease } from './get_ltex_ls_latest_release.js'
 import { readPom, type Pom } from './read_pom.js'
 
@@ -31,12 +31,25 @@ export const ctx = {
 	},
 	getCacheDir() {
 		const dir = cachedir(_store.appId)
-		if (!fs.existsSync(dir)) fs.mkdirSync(dir)
+		if (!existsSync(dir)) mkdirSync(dir)
 		return dir
 	},
 	fetch,
 	extractTar(filePath: string, targetDir: string) {
-		fs.createReadStream(filePath).pipe(tar.x({ cwd: targetDir }))
+		if (!existsSync(targetDir)) mkdirSync(targetDir)
+		return new Promise<void>((a, r) => {
+			extract(
+				{
+					file: filePath,
+					cwd: targetDir
+				},
+				undefined,
+				(err) => {
+					if (err) r(err)
+					else a()
+				}
+			)
+		})
 	},
 	unzip(filePath: string, targetDir: string) {
 		return unzip(filePath, { dir: targetDir })

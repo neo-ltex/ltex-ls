@@ -1,9 +1,8 @@
 import assert from 'node:assert'
 import fs from 'node:fs'
 import path from 'node:path'
-import { Readable } from 'node:stream'
-import { finished } from 'node:stream/promises'
 import { ctx } from './ctx.js'
+import { downloadAsset } from './download_asset.js'
 
 export async function setupLanguageTool() {
 	const release = await ctx.octokit.repos.getLatestRelease({
@@ -18,7 +17,10 @@ export async function setupLanguageTool() {
 
 	const cacheDir = ctx.getCacheDir()
 	const zipfilePath = path.join(cacheDir, asset.name)
-	await downloadLanguageToolIfNeeded(asset, zipfilePath)
+	if (!fs.existsSync(zipfilePath)) {
+		console.info(`Cannot find LanguageTool Archive at '${zipfilePath}', downloading...`)
+		await downloadAsset(asset, zipfilePath)
+	}
 
 	// The zip file is warped in this dir.
 	// extract to `dir` will create this `extractDir`
@@ -29,17 +31,4 @@ export async function setupLanguageTool() {
 	}
 
 	return { version, dir }
-}
-
-async function downloadLanguageToolIfNeeded(asset: { name: string; browser_download_url: string }, zipfilePath: string) {
-	if (!fs.existsSync(zipfilePath)) {
-		console.info(`Cannot find LanguageTool Archive at '${zipfilePath}', downloading...`)
-		const r = await ctx.fetch(asset.browser_download_url)
-
-		assert(r.ok)
-		assert(r.body)
-
-		const fileStream = fs.createWriteStream(zipfilePath, { flags: 'wx' })
-		await finished(Readable.fromWeb(r.body).pipe(fileStream))
-	}
 }

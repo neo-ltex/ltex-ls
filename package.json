@@ -68,5 +68,8 @@
 		"typescript": "^5.3.3",
 		"vitest": "^1.2.1"
 	},
-	"packageManager": "pnpm@8.14.1"
+	"packageManager": "pnpm@8.14.1",
+	"ltex": {
+		"version": "16.0.0"
+	}
 }
