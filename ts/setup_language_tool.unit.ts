@@ -14,7 +14,7 @@ beforeEach(() => {
 
 afterEach(() => tmpDir.removeCallback())
 
-it('save file to cachedir', async () => {
+it('download and extract files to cache dir', async () => {
 	ctx.octokit.repos.getLatestRelease = (async () => ({
 		data: {
 			assets: [
@@ -28,7 +28,7 @@ it('save file to cachedir', async () => {
 		}
 	})) as any
 	ctx.getCacheDir = () => tmpDir.name
-	ctx.fetch = async () => new Response(createReadStream(join(dirname(import.meta), '../fixtures/dummy.zip')))
+	ctx.fetch = async () => new Response(createReadStream(join(dirname(import.meta), '../fixtures/dummy-language-tool.zip')))
 
 	const { version, dir } = await setupLanguageTool()
 
