@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@repobuddy/biome':
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^1.0.1
+    version: 1.0.1
 
 devDependencies:
   '@biomejs/biome':
@@ -560,8 +560,8 @@ packages:
       '@octokit/openapi-types': 19.1.0
     dev: true
 
-  /@repobuddy/biome@1.0.0:
-    resolution: {integrity: sha512-DyCGY9s765Rj6GsVLL1+FyTXmBUd4kw58ui9lrnUR2ps+aI4306G3nsvDQw6CKeuooNak5qbNb+AF1mfm8UVCg==}
+  /@repobuddy/biome@1.0.1:
+    resolution: {integrity: sha512-PjyCGPUGgMS2sSPq9Xmn2txCVoN0xoThys4slv4lxdH2YH+vWu1tGNCGkqDRuwiueNsvKM6u81N2D+7MNMqEIQ==}
     dev: false
 
   /@rollup/rollup-android-arm-eabi@4.9.5:

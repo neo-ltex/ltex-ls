@@ -42,7 +42,7 @@
 		"w": "vitest"
 	},
 	"dependencies": {
-		"@repobuddy/biome": "^1.0.0"
+		"@repobuddy/biome": "^1.0.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.2",
