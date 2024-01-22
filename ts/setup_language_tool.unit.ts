@@ -28,7 +28,8 @@ it('download and extract files to cache dir', async () => {
 		}
 	})) as any
 	ctx.getCacheDir = () => tmpDir.name
-	ctx.fetch = async () => new Response(createReadStream(join(dirname(import.meta), '../fixtures/dummy-language-tool.zip')))
+	ctx.fetch = async () =>
+		new Response(createReadStream(join(dirname(import.meta), '../fixtures/dummy-language-tool.zip')))
 
 	const { version, dir } = await setupLanguageTool()
 
