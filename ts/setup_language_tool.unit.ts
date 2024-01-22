@@ -1,9 +1,10 @@
-import { readFileSync } from 'node:fs'
+import { dirname } from 'dirname-filename-esm'
+import { createReadStream, readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import tmp from 'tmp'
 import { afterEach, beforeEach, expect, it } from 'vitest'
 import { ctx } from './ctx.js'
-import { downloadLanguageTool } from './download_language_tool.js'
+import { setupLanguageTool } from './setup_language_tool.js'
 
 let tmpDir: tmp.DirResult
 
@@ -27,11 +28,20 @@ it('save file to cachedir', async () => {
 		}
 	})) as any
 	ctx.getCacheDir = () => tmpDir.name
-	ctx.fetch = async () => new Response('dummy')
+	ctx.fetch = async () => new Response(createReadStream(join(dirname(import.meta), '../fixtures/dummy.zip')))
 
-	const r = await downloadLanguageTool()
+	const { version, dir } = await setupLanguageTool()
 
-	const filename = join(tmpDir.name, 'LanguageTool-6.0.zip')
-	expect(r).toEqual(filename)
-	expect(readFileSync(filename, 'utf-8')).toEqual('dummy')
+	expect(version).toEqual('6.0')
+
+	expect(readdirSync(dir)).toEqual(['dummy.txt'])
+	expect(readFileSync(join(dir, 'dummy.txt'), 'utf-8')).toEqual('dummy')
 })
+
+it.skip(
+	'save to cachedir (live)',
+	async () => {
+		await setupLanguageTool()
+	},
+	{ timeout: 60000 }
+)
