@@ -18,7 +18,22 @@ export async function setupLanguageTool() {
 
 	const cacheDir = ctx.getCacheDir()
 	const zipfilePath = path.join(cacheDir, asset.name)
+	await downloadLanguageToolIfNeeded(asset, zipfilePath)
+
+	// The zip file is warped in this dir.
+	// extract to `dir` will create this `extractDir`
+	const dir = path.join(cacheDir, `LanguageTool-${version}`)
+	if (!fs.existsSync(dir)) {
+		console.info(`Extracting LanguageTool to ${dir}...`)
+		await ctx.unzip(zipfilePath, cacheDir)
+	}
+
+	return { version, dir }
+}
+
+async function downloadLanguageToolIfNeeded(asset: { name: string; browser_download_url: string }, zipfilePath: string) {
 	if (!fs.existsSync(zipfilePath)) {
+		console.info(`Cannot find LanguageTool Archive at '${zipfilePath}', downloading...`)
 		const r = await ctx.fetch(asset.browser_download_url)
 
 		assert(r.ok)
@@ -27,14 +42,4 @@ export async function setupLanguageTool() {
 		const fileStream = fs.createWriteStream(zipfilePath, { flags: 'wx' })
 		await finished(Readable.fromWeb(r.body).pipe(fileStream))
 	}
-
-	// The zip file is warped in this dir.
-	// extract to `dir` will create this `extractDir`
-	const dir = path.join(cacheDir, `LanguageTool-${version}`)
-	if (!fs.existsSync(dir)) {
-		console.log('extract', zipfilePath, cacheDir)
-		await ctx.unzip(zipfilePath, cacheDir)
-	}
-
-	return { version, dir }
 }
