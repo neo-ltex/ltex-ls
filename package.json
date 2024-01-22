@@ -1,6 +1,6 @@
 {
 	"name": "@neo-ltex/ltex-ls",
-	"version": "16.0.0",
+	"version": "16.0.0-beta.0",
 	"description": "Provides info about https://github.com/neo-ltex/ltex-ls",
 	"keywords": [],
 	"homepage": "https://github.com/neo-ltex/ltex-ls#readme",
