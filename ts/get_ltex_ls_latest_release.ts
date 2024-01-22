@@ -1,9 +1,7 @@
-import { Octokit } from '@octokit/rest'
-
-const octokit = new Octokit()
+import { ctx } from './ctx.js'
 
 export function getLtexLsLatestRelease() {
-	return octokit.rest.repos.getLatestRelease({
+	return ctx.octokit.rest.repos.getLatestRelease({
 		owner: 'valentjn',
 		// owner: 'neo-ltex',
 		repo: 'ltex-ls'

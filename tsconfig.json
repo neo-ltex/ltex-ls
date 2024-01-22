@@ -1,14 +1,13 @@
 {
 	"compilerOptions": {
-		"useDefineForClassFields": true,
-		"verbatimModuleSyntax": true,
+		"lib": ["ES2022"],
 		"module": "NodeNext",
 		"outDir": "esm",
 		"resolveJsonModule": true,
 		"rootDir": "ts",
-		"strict": true
+		"strict": true,
+		"useDefineForClassFields": true,
+		"verbatimModuleSyntax": true,
 	},
-	"include": [
-		"ts"
-	]
+	"include": ["ts"]
 }
