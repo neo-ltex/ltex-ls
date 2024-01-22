@@ -1,0 +1,3 @@
+ignores:
+  - '@repobuddy/biome' # Biome config
+  - '@vitest/coverage-v8' # code coverage
