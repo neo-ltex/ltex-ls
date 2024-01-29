@@ -60,7 +60,7 @@ def downloadLanguageTool(tmpDirPath: pathlib.Path) -> pathlib.Path:
   return tmpDirPath.joinpath(f"LanguageTool-{languageToolVersion}")
 
 
-
+# migrated
 def searchForDictionaries(languageToolDirPath: pathlib.Path) \
       -> Sequence[Tuple[str, pathlib.Path, pathlib.Path]]:
   print("Searching for dictionaries...")
@@ -89,7 +89,7 @@ def searchForDictionaries(languageToolDirPath: pathlib.Path) \
   return dictionaries
 
 
-
+# migrated
 def createCompletionList(languageToolJarFilePath: pathlib.Path, tmpDirPath: pathlib.Path,
       targetDirPath: pathlib.Path, dictionary: Tuple[str, pathlib.Path, pathlib.Path]) -> None:
   language, dictFilePath, infoFilePath = dictionary
@@ -109,7 +109,7 @@ def createCompletionList(languageToolJarFilePath: pathlib.Path, tmpDirPath: path
   with open(targetFilePath, "w", encoding="utf-8") as file: file.write(dictText)
 
 
-
+# migrated
 def main() -> None:
   parser = argparse.ArgumentParser(
       description="Create dictionary lists for (auto-)completion.")
