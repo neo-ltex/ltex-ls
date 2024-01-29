@@ -16,7 +16,13 @@
 		"editor.suggest.insertMode": "replace",
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"cSpell.words": ["biomejs", "ltex", "repobuddy", "valentjn"],
+	"cSpell.words": [
+		"biomejs",
+		"execa",
+		"ltex",
+		"repobuddy",
+		"valentjn"
+	],
 	"githubPullRequests.remotes": ["origin"],
 	"java.compile.nullAnalysis.mode": "automatic"
 }

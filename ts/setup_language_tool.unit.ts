@@ -35,14 +35,6 @@ it('download and extract files to cache dir', async () => {
 
 	expect(version).toEqual('6.0')
 
-	expect(readdirSync(dir)).toEqual(['dummy.txt'])
+	expect(readdirSync(dir)).toEqual(['dummy.txt', 'org'])
 	expect(readFileSync(join(dir, 'dummy.txt'), 'utf-8')).toEqual('dummy')
 })
-
-it.skip(
-	'save to cachedir (live)',
-	async () => {
-		await setupLanguageTool()
-	},
-	{ timeout: 60000 }
-)

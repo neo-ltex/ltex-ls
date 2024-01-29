@@ -6,8 +6,10 @@ export default defineConfig({
 			exclude: ['cjs', 'esm', 'ts/**/*.{system,perf,stress}.ts']
 		},
 		include: [
-			// 'ts/**/*.{system,perf,stress}.ts',
+			process.env['TEST_SYSTEM'] ? 'ts/**/*.system.ts' : '',
+			process.env['TEST_PERF'] ? 'ts/**/*.perf.ts' : '',
+			process.env['TEST_STRESS'] ? 'ts/**/*.stress.ts' : '',
 			'ts/**/*.{spec,test,unit,accept,integrate}.ts'
-		]
+		].filter(Boolean)
 	}
 })

@@ -18,7 +18,7 @@ import xml.etree.ElementTree
 import zipfile
 
 
-
+# migrated
 def getLanguageToolVersion() -> str:
   print("Getting LanguageTool version...")
 
@@ -46,7 +46,7 @@ def getLanguageToolVersion() -> str:
   raise RuntimeError(f"Could not determine LanguageTool version in '{pomFilePath}'")
 
 
-
+# migrated
 def downloadLanguageTool(tmpDirPath: pathlib.Path) -> pathlib.Path:
   languageToolVersion = getLanguageToolVersion()
   archiveFileName = f"LanguageTool-{languageToolVersion}.zip"
@@ -104,6 +104,7 @@ def createCompletionList(languageToolJarFilePath: pathlib.Path, tmpDirPath: path
 
   # explicitly use UTF-8 for Windows
   with open(dictTextFilePath, "r", encoding="utf-8") as file: dictText = file.read()
+  with open(targetFilePath.joinpath("2"), "w", encoding="utf-8") as file: file.write(dictText)
   dictText = "\n".join([line[2:] for line in dictText.splitlines()[1::2]]) + "\n"
   with open(targetFilePath, "w", encoding="utf-8") as file: file.write(dictText)
 
