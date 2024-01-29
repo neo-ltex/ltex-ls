@@ -5,6 +5,7 @@
 		"outDir": "esm",
 		"resolveJsonModule": true,
 		"rootDir": "ts",
+		"skipLibCheck": true,
 		"strict": true,
 		"useDefineForClassFields": true,
 		"verbatimModuleSyntax": true,

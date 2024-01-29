@@ -56,7 +56,14 @@ If you like LT<sub>E</sub>X, but are not able to contribute in any of these ways
 1. Install VS Code, Git, and Apache Maven.
 2. Fork [ltex-ls] on GitHub.
 3. Clone the fork: `git clone https://github.com/<YOUR_USERNAME>/ltex-ls.git`
-4. Build the project: `cd ltex-ls && pnpm i && pnpm build:completion-list`
+4. Build the project:
+
+   ```sh
+   cd ltex-ls
+   pnpm i
+   pnpm build
+   ```
+
 5. It's recommended to use IntelliJ IDEA to debug `ltex-ls`.
 
 ## How to Contribute Code
