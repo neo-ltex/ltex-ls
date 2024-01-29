@@ -104,7 +104,6 @@ def createCompletionList(languageToolJarFilePath: pathlib.Path, tmpDirPath: path
 
   # explicitly use UTF-8 for Windows
   with open(dictTextFilePath, "r", encoding="utf-8") as file: dictText = file.read()
-  with open(targetFilePath.joinpath("2"), "w", encoding="utf-8") as file: file.write(dictText)
   dictText = "\n".join([line[2:] for line in dictText.splitlines()[1::2]]) + "\n"
   with open(targetFilePath, "w", encoding="utf-8") as file: file.write(dictText)
 
