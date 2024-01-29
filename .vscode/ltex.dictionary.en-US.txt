@@ -1,1 +1,5 @@
 vscode-ltex
+ltex-ls
+LTEX
+changelog
+Changelog

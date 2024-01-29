@@ -1,0 +1,4 @@
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QYou can contribute code to accelerate the pace of LTEX's development.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QYou can test pre-release versions to help find bugs before they affect thousands of users.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QYou can translate the user interface into your mother tongue to make LTEX more accessible.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QYou can edit the documentation to make LTEX easier to use.\\E$"}
