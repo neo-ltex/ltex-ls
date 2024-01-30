@@ -37,7 +37,11 @@ export const ctx = {
 				rimrafSync(dir)
 		  },
 	getCacheDir: isCI
-		? () => join(dirname(import.meta), '../.cache')
+		? () => {
+			const dir = join(dirname(import.meta), '../.cache')
+			if (!existsSync(dir)) mkdirSync(dir)
+			return dir
+		}
 		: () => {
 				const dir = cachedir(_store.appId)
 				if (!existsSync(dir)) mkdirSync(dir)
