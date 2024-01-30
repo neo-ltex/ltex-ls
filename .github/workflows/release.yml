@@ -6,7 +6,8 @@ on:
 jobs:
   code:
     uses: repobuddy/.github/.github/workflows/pnpm-verify.yml@main
-
+    with:
+      node-version: '[20]'
   release:
     runs-on: ubuntu-latest
     steps:
