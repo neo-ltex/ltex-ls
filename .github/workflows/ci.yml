@@ -12,92 +12,92 @@ on:
       - "*"
   pull_request:
     branches:
-      - "develop"
+      - main
   workflow_dispatch:
 
 jobs:
   build:
     name: "CI - Build Job"
-    runs-on: "${{ matrix.os }}"
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os:
-          - "ubuntu-20.04"
-          - "macos-11.0"
-          - "windows-2019"
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
 
     steps:
-      - name: "Checkout Repository"
-        uses: "actions/checkout@v3"
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Cache artifacts
         uses: actions/cache@v4
         with:
           path: .cache
           key: ${{ runner.os }}-${{ hashFiles('pom.xmi')}}-${{ hashFiles('ltexls.iml')}}
-      - name: "Set up Java"
-        uses: "actions/setup-java@v3"
+      - name: Set up Java
+        uses: actions/setup-java@v3
         with:
-          java-version: "11.0.9"
-          distribution: "zulu"
+          java-version: 11.0.9
+          distribution: zulu
 
-      - name: "Set up Python"
-        uses: "actions/setup-python@v4"
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.9.0"
+          python-version: 3.9.0
       - uses: pnpm/action-setup@v2
         with:
           version: 8.14.1
-      - name: "Set up Node.js"
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20.10.0
           cache: pnpm
       - run: pnpm install
-      - name: "Create Completion Lists"
-        run: "pnpm build:completion-list"
+      - name: Create Completion Lists
+        run: pnpm build:completion-list
 
-      - name: "Build LTeX LS"
-        run: "mvn -B -e verify"
+      - name: Build LTeX LS
+        run: mvn -B -e verify
 
   inspect:
-    name: "CI - Inspect Job"
-    runs-on: "ubuntu-20.04"
+    name: CI - Inspect Job
+    runs-on: ubuntu-latest
 
     steps:
-      - name: "Checkout Repository"
-        uses: "actions/checkout@v3"
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Cache artifacts
         uses: actions/cache@v4
         with:
           path: .cache
           key: ${{ runner.os }}-${{ hashFiles('pom.xmi')}}-${{ hashFiles('ltexls.iml')}}
-      - name: "Set up Java"
-        uses: "actions/setup-java@v3"
+      - name: Set up Java
+        uses: actions/setup-java@v3
         with:
-          java-version: "11.0.9"
-          distribution: "zulu"
+          java-version: 11.0.9
+          distribution: zulu
 
-      - name: "Set up Python"
-        uses: "actions/setup-python@v4"
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.9.0"
+          python-version: 3.9.0
       - uses: pnpm/action-setup@v2
         with:
           version: 8.14.1
-      - name: "Set up Node.js"
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20.10.0
           cache: pnpm
       - run: pnpm install
-      - name: "Create Completion Lists"
-        run: "pnpm build:completion-list"
+      - name: Create Completion Lists
+        run: pnpm build:completion-list
 
-      - name: "Build LTeX LS"
-        run: "mvn -B -e verify"
+      - name: Build LTeX LS
+        run: mvn -B -e verify
 
       - name: "Set LTEX_LS_IDEA_ARCHIVE_NAME and LTEX_LS_IDEA_DIRECTORY_NAME"
         run: "echo -e \"LTEX_LS_IDEA_ARCHIVE_NAME=ideaIC-2021.2.tar.gz\nLTEX_LS_IDEA_DIRECTORY_NAME=idea-IC-212.4746.92\" >> $GITHUB_ENV"
@@ -116,7 +116,7 @@ jobs:
 
   validate:
     name: "CI - Validate Job"
-    runs-on: "ubuntu-20.04"
+    runs-on: ubuntu-latest
 
     steps:
       - name: "Checkout Repository"
