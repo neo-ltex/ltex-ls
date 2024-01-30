@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@neo-ltex/ltex-ls": "16.0.0-beta.0"
+  },
+  "changesets": []
+}
