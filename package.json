@@ -45,7 +45,7 @@
 		"lint": "biome lint .",
 		"prepare": "husky install",
 		"release": "changeset publish",
-		"t": "vitest",
+		"test": "vitest",
 		"tc": "vitest --coverage",
 		"ts": "cross-env TEST_SYSTEM=true vitest",
 		"verify": "npm-run-all -p check build coverage",
