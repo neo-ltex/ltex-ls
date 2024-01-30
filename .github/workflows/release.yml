@@ -1,0 +1,47 @@
+name: release
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  code:
+    uses: repobuddy/.github/.github/workflows/pnpm-verify.yml@main
+
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.CI_GITHUB_TOKEN }}
+      - name: Cache artifacts
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: ${{ runner.os }}-${{ hashFiles('pom.xmi')}}-${{ hashFiles('ltexls.iml')}}
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.14.1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install
+      - run: pnpm build:pkg
+      - name: update .npmrc with token
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          commit: 'chore: version packages'
+          version: pnpm run version
+          publish: pnpm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}

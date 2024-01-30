@@ -32,6 +32,7 @@
 	],
 	"scripts": {
 		"build": "npm-run-all -p build:cjs build:esm -s build:completion-list build:mvn",
+		"build:pkg": "run-p build:cjs build:esm",
 		"build:cjs": "swc ts -d cjs",
 		"build:esm": "tsc",
 		"build:mvn": "mvn verify",
