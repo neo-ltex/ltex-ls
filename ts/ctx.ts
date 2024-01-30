@@ -1,11 +1,13 @@
 import { Octokit } from '@octokit/rest'
 import cachedir from 'cachedir'
+import { dirname } from 'dirname-filename-esm'
 import unzip from 'extract-zip'
 import isCI from 'is-ci'
 import { existsSync, mkdirSync } from 'node:fs'
+import { join } from 'node:path'
 import { rimrafSync } from 'rimraf'
 import { extract } from 'tar'
-import { dirSync, type DirResult } from 'tmp'
+import { type DirResult } from 'tmp'
 import { getLtexLsLatestRelease } from './get_ltex_ls_latest_release.js'
 import { readPom, type Pom } from './read_pom.js'
 
@@ -29,18 +31,13 @@ export const ctx = {
 		return (_store.pom = readPom())
 	},
 	clearCacheDir: isCI
-		? () => {
-				if (_store.tmpDir) _store.tmpDir.removeCallback()
-		  }
+		? () => {}
 		: () => {
 				const dir = cachedir(_store.appId)
 				rimrafSync(dir)
 		  },
 	getCacheDir: isCI
-		? () => {
-				_store.tmpDir = dirSync()
-				return _store.tmpDir.name
-		  }
+		? () => join(dirname(import.meta), '../.cache')
 		: () => {
 				const dir = cachedir(_store.appId)
 				if (!existsSync(dir)) mkdirSync(dir)

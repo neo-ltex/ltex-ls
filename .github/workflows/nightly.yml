@@ -18,7 +18,11 @@ jobs:
     steps:
       - name: "Checkout Repository"
         uses: "actions/checkout@v3"
-
+      - name: Cache artifacts
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: ${{ runner.os }}-${{ hashFiles('pom.xmi')}}-${{ hashFiles('ltexls.iml')}}
       - name: "Set up Java"
         uses: "actions/setup-java@v3"
         with:
