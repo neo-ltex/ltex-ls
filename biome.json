@@ -5,6 +5,9 @@
 		"ignore": ["cjs", "coverage", "esm", "target"],
 		"include": ["ts/**/*", "**/*.json"]
 	},
+	"formatter": {
+		"lineEnding": "lf"
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {

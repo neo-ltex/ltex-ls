@@ -28,8 +28,6 @@
 		"repobuddy",
 		"valentjn"
 	],
-	"githubPullRequests.remotes": [
-		"origin"
-	],
+	"githubPullRequests.remotes": ["origin"],
 	"java.compile.nullAnalysis.mode": "automatic"
 }
