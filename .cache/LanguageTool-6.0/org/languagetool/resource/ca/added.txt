@@ -1,0 +1,50 @@
+# A POS tag dictionary that's used as an addition (or as a fix) to catalan.dict
+# These words are candidates to be added (or fixed) in catalan.dict in the future
+# File Encoding: UTF-8
+# Format: fullform baseform postags (tab separated)
+########## Dictionary fixes ##########
+########## Additions ##########
+ACN	ACN	NPFSO00
+ATC	ATC	NPFSO00
+Blender	Blender	NPMSO00
+FCC	FCC	NPCSO00
+Kipling	Kipling	NPCNSP0
+Lancashire	Lancashire	NPCSG00
+Lannister	Lannister	NPCNSP0
+Nash	Nash	NPCNSP0
+PFI	PFI	NCMN000
+Pompadour	Pompadour	NPCNSP0
+Ratzinger	Ratzinger	NPCNSP0
+Scribd	Scribd	NPCNO00
+Sherwood	Sherwood	NPCNSP0
+Stiglitz	Stiglitz	NPCNSP0
+Tyler	Tyler	NPCNSP0
+Xiaoping	Xiaoping	NPCNSP0
+criptodelinqüència	criptodelinqüència	NCFS000
+criptodelinqüències	criptodelinqüència	NCFP000
+criptoinversions	criptoinversió	NCFP000
+criptoinversió	criptoinversió	NCFS000
+criptomàfia	criptomàfia	NCFS000
+criptomàfies	criptomàfia	NCFP000
+emmetxament	emmetxament	NCMS000
+emmetxaments	emmetxament	NCMP000
+encadellament	encadellament	NCMS000
+encadellaments	encadellament	NCMP000
+multiesportiu	multiesportiu	AQ0MS0
+multiesportius	multiesportiu	AQ0MP0
+multiesportiva	multiesportiu	AQ0FS0
+multiesportives	multiesportiu	AQ0FP0
+picoreta	picoreta	NCFS000
+picoretes	picoreta	NCFP000
+polipeptídic	polipeptídic	AQ0MS0
+polipeptídica	polipeptídic	AQ0FS0
+polipeptídics	polipeptídic	AQ0MP0
+polipeptídiques	polipeptídic	AQ0FP0
+pseudoagustiniana	pseudoagustinià	AQ0FS0
+pseudoagustinianes	pseudoagustinià	AQ0FP0
+pseudoagustinians	pseudoagustinià	AQ0MP0
+pseudoagustinià	pseudoagustinià	AQ0MS0
+rojoncosa	rojoncós	AQ0FS0
+rojoncoses	rojoncós	AQ0FP0
+rojoncosos	rojoncós	AQ0MP0
+rojoncós	rojoncós	AQ0MS0

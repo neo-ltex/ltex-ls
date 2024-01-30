@@ -1,6 +1,6 @@
 {
 	"name": "@neo-ltex/ltex-ls",
-	"version": "16.0.0-beta.0",
+	"version": "16.0.0-beta.1",
 	"description": "Provides info about https://github.com/neo-ltex/ltex-ls",
 	"keywords": [],
 	"homepage": "https://github.com/neo-ltex/ltex-ls#readme",
@@ -39,7 +39,7 @@
 		"build:completion-list": "node --loader ts-node/esm ts/bin/create_completion_list.ts",
 		"check": "biome check .",
 		"coverage": "vitest run --coverage",
-    "cs": "changeset",
+		"cs": "changeset",
 		"depcheck": "depcheck",
 		"format": "biome format . --write",
 		"lint": "biome lint .",
@@ -49,7 +49,7 @@
 		"tc": "vitest --coverage",
 		"ts": "cross-env TEST_SYSTEM=true vitest",
 		"verify": "npm-run-all -p check build coverage",
-    "version": "changeset version"
+		"version": "changeset version"
 	},
 	"dependencies": {
 		"@octokit/rest": "^20.0.2",
