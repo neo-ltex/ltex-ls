@@ -12,5 +12,6 @@
 		"vscjava.vscode-java-pack",
 		"vscjava.vscode-maven",
 		"yzhang.markdown-all-in-one",
+		"redhat.vscode-yaml",
 	]
 }
