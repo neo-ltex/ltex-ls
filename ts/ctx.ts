@@ -1,9 +1,11 @@
 import { Octokit } from '@octokit/rest'
 import cachedir from 'cachedir'
 import unzip from 'extract-zip'
+import isCI from 'is-ci'
 import { existsSync, mkdirSync } from 'node:fs'
 import { rimrafSync } from 'rimraf'
 import { extract } from 'tar'
+import { dirSync, type DirResult } from 'tmp'
 import { getLtexLsLatestRelease } from './get_ltex_ls_latest_release.js'
 import { readPom, type Pom } from './read_pom.js'
 
@@ -11,6 +13,7 @@ export const _store: {
 	appId: string
 	ltexLsRelease?: Awaited<ReturnType<typeof getLtexLsLatestRelease>>
 	pom?: Pom
+	tmpDir?: DirResult
 } = {
 	appId: 'neo-ltex-ltex-ls'
 }
@@ -25,15 +28,24 @@ export const ctx = {
 		if (_store.pom) return _store.pom
 		return (_store.pom = readPom())
 	},
-	clearCacheDir() {
-		const dir = cachedir(_store.appId)
-		rimrafSync(dir)
-	},
-	getCacheDir() {
-		const dir = cachedir(_store.appId)
-		if (!existsSync(dir)) mkdirSync(dir)
-		return dir
-	},
+	clearCacheDir: isCI
+		? () => {
+				if (_store.tmpDir) _store.tmpDir.removeCallback()
+		  }
+		: () => {
+				const dir = cachedir(_store.appId)
+				rimrafSync(dir)
+		  },
+	getCacheDir: isCI
+		? () => {
+				_store.tmpDir = dirSync()
+				return _store.tmpDir.name
+		  }
+		: () => {
+				const dir = cachedir(_store.appId)
+				if (!existsSync(dir)) mkdirSync(dir)
+				return dir
+		  },
 	fetch,
 	extractTar(filePath: string, targetDir: string) {
 		if (!existsSync(targetDir)) mkdirSync(targetDir)
