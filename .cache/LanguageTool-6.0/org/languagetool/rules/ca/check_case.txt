@@ -1,0 +1,563 @@
+# Phrases to check case. Capitalization at the sentence start is allowed.
+# Optionally, add a specific message after '=' 
+Joan Pau
+Josep Maria
+Joan Maria
+Josep Lluís
+Joan Lluís
+Lluís Maria
+da Vinci
+El codi Da Vinci
+van Beethoven
+von Clausewitz
+van Gogh
+el Prat de Llobregat
+#l'Alacantí
+l'Alcalatén
+#l'Alcoià
+l'Alt Maestrat
+l'Alt Millars
+l'Alt Palància
+l'Alt Vinalopó
+el Baix Maestrat
+el Baix Segura
+el Baix Vinalopó
+el Camp de Morvedre
+el Camp de Túria
+la Canal de Navarrés
+#el Comtat
+#la Costera
+la Foia de Bunyol
+#l'Horta
+la Marina Alta
+la Marina Baixa
+la Plana Alta
+la Plana Baixa
+la Plana d'Utiel
+#els Ports
+#el Racó
+la Ribera Alta
+la Ribera Baixa
+la Safor
+els Serrans
+la Vall d'Albaida
+la Vall de Cofrents
+el Vinalopó Mitjà
+l'Alt Camp
+l'Alt Empordà
+l'Alt Penedès
+l'Alt Urgell
+l'Alta Ribagorça
+l'Anoia
+el Bages
+el Baix Camp
+el Baix Ebre
+el Baix Empordà
+el Baix Llobregat
+el Baix Penedès
+el Barcelonès
+el Berguedà
+la Cerdanya
+la Conca de Barberà
+el Garraf
+#les Garrigues
+la Garrotxa
+#el Gironès
+#el Maresme
+el Moianès
+el Montsià
+#la Noguera
+el Pallars Jussà
+el Pallars Sobirà
+el Pla de l'Estany
+el Pla d'Urgell
+#el Priorat
+la Ribera d'Ebre
+el Ripollès
+la Segarra
+el Segrià
+#la Selva
+#el Solsonès
+#el Tarragonès
+la Terra Alta
+l'Urgell
+la Vall d'Aran
+el Vallès Occidental
+el Vallès Oriental
+l'Alta Cerdanya
+el Capcir
+el Conflent
+la Fenolleda
+el Rosselló
+el Vallespir
+Marina Alta
+Marina Baixa
+estat d'alarma
+expedients de regulació temporal d'ocupació
+expedient de regulació temporal d'ocupació
+R+D+I
+R+D
+Regió de Múrcia
+producte interior brut
+Tractat de Maastricht
+Tractat de Niça
+Tractat de No-proliferació Nuclear
+Tractat de Forces Nuclears d'Abast Intermedi
+Tractat de Roma
+Tractat de Schengen
+Tractat de Versalles
+Compromís de Casp
+Pacte de Varsòvia
+Pacte de Lizarra
+Pacte de Toledo
+Pacte de Bogotà
+Pacte d'Estabilitat i Creixement
+Pacte Nacional pel Referèndum
+Declaració de Barcelona
+Declaració de Pedralbes
+Declaració Valencianista
+Declaració d'Arnaga
+Convenció de Dublín
+Acord de París
+Acord de Belfast
+Acord de Divendres Sant
+Manifest de Cervera
+Protocol de Kyoto
+Tractat de Maastricht
+Tractat de Niça
+Tractat de No-proliferació Nuclear
+Tractat de Forces Nuclears d'Abast Intermedi
+Tractat de Roma
+Tractat de Schengen
+Tractat de Versalles
+Compromís de Casp
+Pacte de Varsòvia
+Pacte de Lizarra
+Pacte de Toledo
+Pacte de Bogotà
+Pacte d'Estabilitat i Creixement
+Pacte Nacional pel Referèndum
+Declaració de Barcelona
+Declaració de Pedralbes
+Declaració Valencianista
+Declaració d'Arnaga
+Convenció de Dublín
+Acord de París
+Acord de Belfast
+Acord de Divendres Sant
+Manifest de Cervera
+Protocol de Kyoto
+baixa edat mitjana
+alta edat mitjana
+edat mitjana
+Fons Monetari Internacional
+Congrés dels EUA
+Congrés dels Estats Units
+Congrés dels Estats Units d'Amèrica
+Cambra de Representants
+educació secundària
+Educació Secundària Obligatòria
+Pròxim Orient
+Orient Mitjà
+Extrem Orient
+Orient Llunyà
+valor afegit brut
+Comissió Europea
+Consell Europeu
+Consell d'Europa
+Parlament Europeu
+cap parlament europeu
+algun parlament europeu
+Direcció General d'Administracions Públiques
+administracions públiques
+administració pública
+ensenyament superior
+ensenyament mitjà
+corredor mediterrani
+tecnologies de la informació i la comunicació
+raigs X
+Cap d'Any
+Església catòlica
+Església anglicana
+Conferència Episcopal Espanyola
+Consell Pastoral de Barcelona
+Setmana Tràgica
+Gran Depressió
+Transició espanyola
+Primavera de Praga
+Primavera Àrab
+Revolució Francesa
+Revolució Russa
+Revolució de Vellut de l'antiga Txecoslovàquia
+Revolució de les Tulipes del Kirguizistan
+Revolució Taronja d'Ucraïna
+Revolució del Gessamí de Tunísia
+Revolució dels Paraigües de Hong Kong
+guerra de Successió
+guerra dels Quatre Dies
+guerra dels Sis Dies
+guerra dels Set Anys
+guerra de Bòsnia
+guerra del Golf
+guerra del golf Pèrsic
+guerra civil de Somàlia
+guerra freda
+guerra del cava
+guerra de l'aigua
+guerra de preus
+guerra bruta
+Primera Guerra Mundial
+I Guerra Mundial
+Segona Guerra Mundial
+II Guerra Mundial
+Guerra Civil Espanyola
+espai Schengen
+espai de Schengen
+Dia Internacional de les Dones
+Dia Internacional de la Dona
+canal de Suez
+Països Baixos
+Principat d'Andorra
+#denominació d'origen protegida
+#denominació d'origen
+Divendres de Dolors
+Divendres de Passió
+Dissabte de Passió
+Diumenge de Rams
+Dilluns Sant
+Dimarts Sant
+Dimecres Sant
+Dimecres de Cendra
+Dijous Sant
+Divendres Sant
+Dissabte Sant
+Dissabte de Glòria
+Diumenge de Pasqua
+Diumenge de Glòria
+Diumenge de Resurrecció
+Pasqua de Resurrecció
+Pasqua Florida
+Pasqua Granada
+primera Pasqua
+segona Pasqua
+Pasqua abans de Rams
+Dilluns de Pasqua
+política agrària comuna
+Consell d'Europa
+Consell Europeu
+zona euro
+eurozona
+La Rioja
+Franc Comtat
+el Franc Comtat
+Declaració Universal dels Drets Humans
+Conveni Europeu de Drets Humans
+Dia dels Drets Humans
+Tribunal Europeu de Drets Humans
+#drets humans
+Save the Children
+pressupostos de la Generalitat
+pressupostos generals de l'Estat
+pressuposts de la Generalitat
+pressuposts generals de l'Estat
+sistema solar
+síndrome de savant
+síndrome del savant
+Aràbia Saudita
+Aràbia Saudí
+patrimoni de la humanitat
+patrimoni cultural immaterial de la humanitat
+bé cultural d'interès nacional
+bé cultural d'interés nacional
+bé cultural d'interès local
+bé cultural d'interés local
+bé d'interés cultural
+bé d'interès cultural
+béns culturals d'interès nacional
+béns culturals d'interés nacional
+béns culturals d'interès local
+béns culturals d'interés local
+béns d'interés cultural
+béns d'interès cultural
+reserva nacional
+reserva de la biosfera
+reserva biològica
+parc nacional
+paratge natural
+parc natural
+parc nacional d'Aigüestortes i Estany de Sant Maurici
+parc nacional d'Ordesa i Mont Perdut
+parc natural dels Aiguamolls de l'Empordà
+parc natural dels Ports
+parc natural del Delta de l'Ebre
+parc natural del Delta del Llobregat
+parc natural de les Capçaleres del Ter i del Freser
+Alt Pirineu
+impost sobre actes jurídics documentats
+impost d'actes jurídics documentats
+impost sobre el valor afegit
+impost sobre la renda
+impost sobre la renda de les persones físiques
+impost sobre l'increment de valor dels terrenys de naturalesa urbana
+impost de plusvàlua municipal
+impost de plusvàlua
+actes jurídics documentats
+Comunitat de Madrid
+Comunitat Valenciana
+País Valencià
+els Pirineus
+el Pirineu
+als Pirineus
+al Pirineu
+dels Pirineus
+del Pirineu
+comunitat autònoma
+comunitats autònomes
+Tots Sants
+variant delta
+variant delta plus
+talibà
+talibans
+megawatt
+megawatts
+megabyte
+megabytes
+gigabyte
+gigabytes
+òmicron
+intel·ligència artificial
+banc dolent
+honoris causa
+palau de Buckingham
+llei marcial
+Rada Suprema
+països bàltics
+repúbliques bàltiques
+estats bàltics
+estat membre
+estats membres
+cop d'estat
+colp d'estat
+cops d'estat
+colps d'estat
+estat del benestar
+qüestió d'estat
+qüestions d'estat
+estat nació
+estats nació
+estat de dret
+pacte d'estat
+raó d'estat
+raons d'estat
+Jocs Olímpics d'hivern
+els Emirats Àrabs
+els Emirats Àrabs Units
+diada de Sant Jordi
+dia de Sant Jordi
+Premi Nobel de la Pau
+Premi Nobel de Literatura
+Premis Nobel
+Premi Nobel d'Economia
+Premi Nobel de Física
+Premi Nobel de Química
+Premi Nobel de Medicina
+Festival de la Cançó d'Eurovisió
+Unió Europea de Radiodifusió
+la Moncloa
+la Zarzuela
+Prime Video
+Amazon Prime Video
+Prime Music
+Amazon Prime Music
+Amazon Prime
+Vell Continent
+el Vell Continent
+debat sobre l'estat de la Unió
+debat sobre l'estat de la Unió Europea
+debat sobre l'estat de la nació
+debat de política general
+debat de política general sobre l'estat de la nació
+Unió Europea
+síndic de greuges
+síndica de greuges
+IVA suportat
+IVA repercutit
+IVA meritat
+Google Calendar
+Universitat Occitana d'Estiu
+Universitat Catalana d'Estiu
+Universitat Abat Oliba CEU
+Universitat d'Alacant
+Universitat d'Andorra
+Universitat Autònoma de Barcelona
+Universitat de Barcelona
+Universitat CEU Cardenal Herrera
+Universitat de Girona
+Universitat de les Illes Balears
+Universitat Internacional de Catalunya
+Universitat Jaume I
+Universitat de Lleida
+Universitat Miguel Hernández
+Universitat Miguel Hernández d'Elx
+Universitat Oberta de Catalunya
+Universitat de Perpinyà Via Domícia
+Universitat Politècnica de Catalunya
+Universitat Politècnica de València
+Universitat Pompeu Fabra
+Universitat Ramon Llull
+Universitat Rovira i Virgili
+Universitat de Sàsser
+Universitat de València
+Universitat de Vic
+Universitat Central de Catalunya
+Orquestra Simfònica de Barcelona i Nacional de Catalunya
+Mare de Déu d'Agost
+Assumpció de la Mare de Déu
+Falles de València
+Falles de Sant Josep
+Premier League
+The Premiership
+postguerra
+Big Ben
+Regne UnitGran Bretanya
+País de Gal·les
+Irlanda del Nord
+La Fúmiga
+Google Maps
+Google Earth
+Unió Esportiva d'Horta
+Israel-Palestina
+X-Men
+Google Street View
+Street View
+corredor mediterrani
+corredor del Mediterrani
+mar Mediterrani
+mar Mediterrània
+deute públic
+taxa de natalitat
+taxa de mortalitat
+taxa de fecunditat
+índex de fecunditat
+entitat local
+entitats locals
+Amèrica Llatina
+Codi Civil
+Codi Militar
+Codi Penal
+nit de Cap d'Any
+nit de Nadal
+#Carta Magna
+llei del divorci
+llei de l'avortament
+llei de partits
+llei d'enjudiciament civil
+llei d'estrangeria
+llei de qualitat de l'ensenyament
+llei de limitació de mandats
+llei de costes
+llei de seguretat nacional
+llei del referèndum
+llei de transitorietat jurídica
+llei del clima
+llei de memòria democràtica
+llei de memòria històrica
+llei trans
+Estatut d'Autonomia
+Estatut dels Treballadors
+pla Marshall
+pla Ibarretxe
+pla Tenet
+pla Juncker
+pla de Chequers
+Pla d'Actuació Municipal
+Pla Hidrològic Nacional
+Pla Especial de Reforma Interior
+Pla General de Normalització Lingüística
+Pla Especial d'Emergències per Inundacions a Catalunya
+Pla Especial d'Emergències per Nevades a Catalunya
+Pla Especial d'Emergències per Allaus a Catalunya
+Pla Especial d'Emergències per Incendis Forestals a Catalunya
+Pla Especial d'Emergències per Risc de Vent a Catalunya
+Pla d'Emergència Exterior del Sector Químic de Catalunya
+Pla d'Emergència Exterior del Sector Químic de Tarragona
+Pla d'Emergència Exterior del Sector Químic de les Terres de l'Ebre
+Pla d'Emergència Exterior del Sector Químic de la Tordera
+Sant Pere de Ribes
+Llei orgànica d'harmonització del procés autonòmic
+avinguda Diagonal
+baixada de la Glòria
+carrer Major
+carretera de Sants
+districte de Gràcia
+jardins de la Vil·la Amèlia
+passatge del Sol
+passeig de Gràcia
+parada Passeig de Gràcia
+Jardinets de Gràcia
+Jardins de Salvador Espriu
+passeig de Sant Joan
+#passeig Marítim
+parc de la Ciutadella
+parc de la Mitjana
+pla de l'Ós
+pla de Palau
+plaça de les Mèlies
+plaça de Sant Jaume
+plaça Universitat
+ronda Universitat
+plaça del Blat
+plaça del Vi
+plaça Reial
+rambla Nova
+rambla de la Llibertat
+ronda de Dalt
+ronda del Mig
+ronda del Litoral
+ronda de Mataró
+ronda de Sant Pere
+nus de la Trinitat
+pota nord de Barcelona
+Rambla de Barcelona
+barri San Bernardo
+districte Meatpacking
+carrer Virgen de la Esperanza
+carrer Génova
+font de Neptuno
+font de Cibeles
+passeig de la Castellana
+passeig del Prado
+plaça Castilla
+plaça de la Puerta del Sol
+Moll de la Fusta
+Portal de l'Àngel
+Sot del Migdia
+Via Augusta
+Via Favència
+Via Júlia
+Via Laietana
+Zona Franca
+Travessera de Dalt
+Eix del Llobregat
+Eix Pirinenc
+Cinquena Avinguda
+Carrera de San Jerónimo
+Trafalgar Square
+Downing Street
+Piccadilly Circus
+Camps Elisis
+Central Park
+Place de l'Étoile
+Grand-Place
+atlantisme
+bon Nadal
+feliç any nou
+pròsper any nou
+À Punt Mèdia
+À Punt
+de Nadal a Sant Esteve
+Creu de Sant Jordi
+Creus de Sant Jordi
+Terra Santa
+lloc sant
+llocs sants

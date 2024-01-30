@@ -1,0 +1,34 @@
+# A part-of-speech dictionary that's used additionally to the binary dictionary (*.dict).
+# This does not add words to the spell checker, see hunspell/spelling.txt for that.
+# File Encoding: UTF-8
+# Format: three tab-separated fields: fullform baseform postags
+Blender	Blender	NPMSO00
+Kipling	Kipling	NPCNSP0
+Lancashire	Lancashire	NPCSG00
+Lancaster	Lancaster	NPCSG00
+Lannister	Lannister	NPCNSP0
+Logan	Logan	NPCNSP0
+Nash	Nash	NPCNSP0
+Pompadour	Pompadour	NPCNSP0
+Ratzinger	Ratzinger	NPCNSP0
+Scribd	Scribd	NPCNO00
+Sherwood	Sherwood	NPCNSP0
+Stiglitz	Stiglitz	NPCNSP0
+Tyler	Tyler	NPCNSP0
+Xiaoping	Xiaoping	NPCNSP0
+armagedón	armagedón	NCMS000
+criptodelincuencia	criptodelincuencia	NCFS000
+criptodelincuencias	criptodelincuencia	NCFP000
+criptoinversiones	criptoinversión	NCFP000
+criptoinversión	criptoinversión	NCFS000
+criptomafia	criptomafia	NCFS000
+criptomafias	criptomafia	NCFP000
+descubribilidad	descubribilidad	NCFS000
+descubribilidades	descubribilidad	NCFP000
+encontrabilidad	encontrabilidad	NCFS000
+encontrabilidades	encontrabilidad	NCFP000
+preúvas	preúvas	NCFP000
+pseudoagustiniana	pseudoagustiniano	AQ0FS0
+pseudoagustinianas	pseudoagustiniano	AQ0FP0
+pseudoagustiniano	pseudoagustiniano	AQ0MS0
+pseudoagustinianos	pseudoagustiniano	AQ0MP0

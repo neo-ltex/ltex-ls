@@ -1,0 +1,32 @@
+# Words that extend the spell checker. See ignore.txt for words that should be
+# completely ignored (i.e. not used to create suggestions).
+Blender
+Kipling
+Lancashire
+Lancaster
+Lannister
+Logan
+Nash
+Pompadour
+Ratzinger
+Scribd
+Sherwood
+Stiglitz
+Tyler
+Xiaoping
+armagedón
+criptodelincuencia
+criptodelincuencias
+criptoinversiones
+criptoinversión
+criptomafia
+criptomafias
+descubribilidad
+descubribilidades
+encontrabilidad
+encontrabilidades
+preúvas
+pseudoagustiniana
+pseudoagustinianas
+pseudoagustiniano
+pseudoagustinianos
