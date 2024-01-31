@@ -3,6 +3,7 @@ import cachedir from 'cachedir'
 import { dirname } from 'dirname-filename-esm'
 import unzip from 'extract-zip'
 import isCI from 'is-ci'
+import { mkdirpSync } from 'mkdirp'
 import { existsSync, mkdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { rimrafSync } from 'rimraf'
@@ -39,12 +40,12 @@ export const ctx = {
 	getCacheDir: isCI
 		? () => {
 				const dir = join(dirname(import.meta), '../.cache')
-				if (!existsSync(dir)) mkdirSync(dir)
+				if (!existsSync(dir)) mkdirpSync(dir)
 				return dir
 		  }
 		: () => {
 				const dir = cachedir(_store.appId)
-				if (!existsSync(dir)) mkdirSync(dir)
+				if (!existsSync(dir)) mkdirpSync(dir)
 				return dir
 		  },
 	fetch,
