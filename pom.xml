@@ -312,12 +312,12 @@
             </goals>
             <configuration>
               <target name="ktlint">
-                <java taskname="ktlint" dir="${project.basedir}" fork="true" failonerror="true"
+                <java taskname="ktlint" dir="${project.basedir}/src" fork="true" failonerror="true"
                     classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
                   <arg value="--disabled_rules=chain-wrapping,indent,range-spacing"/>
                   <arg value="--experimental"/>
                   <arg value="--reporter=plain"/>
-                  <arg value="src/**/*.kt"/>
+                  <arg value="**/*.kt"/>
                 </java>
               </target>
             </configuration>
