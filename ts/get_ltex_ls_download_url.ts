@@ -1,8 +1,9 @@
 import assert from 'node:assert'
 import { ctx } from './ctx.js'
 import { getLtexLsVersion } from './get_ltex_ls_version.js'
+import type { Architecture, Platform } from './types.js'
 
-export async function getLtexLsDownloadUrl(platform: 'windows' | 'linux' | 'mac', arch: 'x64' = 'x64') {
+export async function getLtexLsDownloadUrl(platform: Platform, arch: Architecture = 'x64') {
 	const version = getLtexLsVersion()
 	const regex = new RegExp(`ltex-ls-${version}-${platform}-${arch}`)
 

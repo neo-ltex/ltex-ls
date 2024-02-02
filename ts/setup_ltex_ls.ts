@@ -4,8 +4,9 @@ import { join } from 'node:path'
 import { ctx } from './ctx.js'
 import { downloadAsset } from './download_asset.js'
 import { getLtexLsVersion } from './get_ltex_ls_version.js'
+import type { Platform } from './types.js'
 
-export async function setupLtexLs(platform: 'windows' | 'mac' | 'linux' | undefined = getCurrentPlatform()) {
+export async function setupLtexLs(platform: Platform | undefined = getCurrentPlatform()) {
 	const version = getLtexLsVersion()
 	const releases = await ctx.octokit.repos.listReleases({
 		owner: 'valentjn',
