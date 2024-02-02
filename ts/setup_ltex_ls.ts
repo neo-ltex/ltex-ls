@@ -21,18 +21,18 @@ export async function setupLtexLs(platform: Platform | undefined = getCurrentPla
 	ok(asset, `Unable to find asset for platform '${platform}'`)
 
 	const cacheDir = ctx.getCacheDir()
-	const zipfilePath = join(cacheDir, asset.name)
-	if (!existsSync(zipfilePath)) {
-		console.info(`Cannot find ltex-ls Archive at '${zipfilePath}', downloading...`)
-		await downloadAsset(asset, zipfilePath)
+	const archivefilePath = join(cacheDir, asset.name)
+	if (!existsSync(archivefilePath)) {
+		console.info(`Cannot find ltex-ls Archive at '${archivefilePath}', downloading...`)
+		await downloadAsset(asset.browser_download_url, archivefilePath)
 	}
 
 	const dir = join(cacheDir, `ltex-ls-${release.name}-${platform}`)
 	if (!existsSync(dir)) {
 		console.info(`Extracting ltex-ls to ${dir}...`)
 		platform === 'windows'
-			? await ctx.unzip(zipfilePath, `${dir}-tmp`)
-			: await ctx.extractTar(zipfilePath, `${dir}-tmp`)
+			? await ctx.unzip(archivefilePath, `${dir}-tmp`)
+			: await ctx.extractTar(archivefilePath, `${dir}-tmp`)
 		renameSync(join(`${dir}-tmp`, `ltex-ls-${release.name}`), dir)
 		rmdirSync(`${dir}-tmp`)
 	}
