@@ -43,3 +43,14 @@ Find more information (how to install, how to use, etc.) at the [website of LT<s
 - **Multilingual support** with babel commands or magic comments
 - Possibility to use **external LanguageTool servers**
 - **[Extensive documentation](https://valentjn.github.io/ltex)**
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
