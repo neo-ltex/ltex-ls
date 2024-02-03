@@ -21,6 +21,6 @@
   "skipCi": true,
   "repoType": "github",
   "repoHost": "https://github.com",
-  "projectName": "ltex-ls",
+  "projectName": "ltex-ls",t
   "projectOwner": "neo-ltex"
 }
