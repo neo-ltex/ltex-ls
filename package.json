@@ -36,6 +36,8 @@
 		"build:cjs": "swc ts -d cjs",
 		"build:esm": "tsc",
 		"build:mvn": "mvn verify",
+		"build:binary": "node --loader ts-node/esm ts/bin/create_binary_archive.ts",
+		"build:binary:py": "python tools/createBinaryArchives.py",
 		"build:completion-list": "node --loader ts-node/esm ts/bin/create_completion_list.ts",
 		"check": "biome check .",
 		"coverage": "vitest run --coverage",
