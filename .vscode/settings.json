@@ -22,11 +22,23 @@
 	"cSpell.words": [
 		"biomejs",
 		"CEFR",
+		"cryptoki",
+		"dynalink",
 		"execa",
+		"Gson",
 		"Intelli",
+		"jdwp",
+		"jgss",
+		"jlink",
+		"jmods",
+		"jsobject",
 		"ltex",
+		"nashorn",
+		"prefs",
 		"repobuddy",
-		"valentjn"
+		"sasl",
+		"valentjn",
+		"zipfs"
 	],
 	"githubPullRequests.remotes": ["origin"],
 	"java.compile.nullAnalysis.mode": "automatic"
