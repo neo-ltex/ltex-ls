@@ -48,6 +48,16 @@ export const ctx = {
 				if (!existsSync(dir)) mkdirpSync(dir)
 				return dir
 		  },
+	getCurrentPlatform() {
+		switch (process.platform) {
+			case 'win32':
+				return 'windows'
+			case 'darwin':
+				return 'mac'
+			default:
+				return 'linux'
+		}
+	},
 	fetch,
 	extractTar(filePath: string, targetDir: string) {
 		if (!existsSync(targetDir)) mkdirSync(targetDir)

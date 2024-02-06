@@ -6,7 +6,7 @@ import { downloadAsset } from './download_asset.js'
 import { getLtexLsVersion } from './get_ltex_ls_version.js'
 import type { Platform } from './types.js'
 
-export async function setupLtexLs(platform: Platform | undefined = getCurrentPlatform()) {
+export async function setupLtexLs(platform: Platform | undefined = ctx.getCurrentPlatform()) {
 	const version = getLtexLsVersion()
 	const releases = await ctx.octokit.repos.listReleases({
 		owner: 'valentjn',
@@ -37,15 +37,4 @@ export async function setupLtexLs(platform: Platform | undefined = getCurrentPla
 		rmdirSync(`${dir}-tmp`)
 	}
 	return { version: release.name, dir }
-}
-
-function getCurrentPlatform() {
-	switch (process.platform) {
-		case 'win32':
-			return 'windows'
-		case 'darwin':
-			return 'mac'
-		default:
-			return 'linux'
-	}
 }
