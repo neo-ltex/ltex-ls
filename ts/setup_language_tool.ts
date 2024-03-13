@@ -6,7 +6,7 @@ import { downloadAsset } from './download_asset.js'
 
 export async function setupLanguageTool() {
 	const release = await ctx.octokit.repos.getLatestRelease({
-		owner: 'valentjn',
+		owner: 'neo-ltex',
 		repo: 'languagetool-mirror'
 	})
 	const asset = release.data.assets[0]

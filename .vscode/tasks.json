@@ -58,5 +58,14 @@
       },
       "problemMatcher": "$gcc",
     },
+    {
+      "label": "Update Dependencies",
+      "type": "shell",
+      "command": "mvn versions:use-latest-releases",
+      "group": {
+        "kind": "test",
+      },
+      "problemMatcher": "$gcc",
+    },
   ],
 }

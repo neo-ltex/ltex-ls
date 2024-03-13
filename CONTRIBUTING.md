@@ -53,13 +53,14 @@ If you like LT<sub>E</sub>X, but are not able to contribute in any of these ways
 
 [As explained in the FAQ][faq], LT<sub>E</sub>X consists of two components: [vscode-ltex] and [ltex-ls]. This guide is only about the `ltex-ls` part. If you want to change vscode-ltex as well, [be sure to read and follow the contribution guidelines of ltex-ls][vscode-ltex-contributing-html].
 
-1. Install VS Code, Git, and Apache Maven.
+1. Install VS Code, Git, Node.js and Apache Maven.
 2. Fork [ltex-ls] on GitHub.
 3. Clone the fork: `git clone https://github.com/<YOUR_USERNAME>/ltex-ls.git`
 4. Build the project:
 
    ```sh
    cd ltex-ls
+   npm install -g pnpm
    pnpm i
    pnpm build
    ```
@@ -70,7 +71,7 @@ If you like LT<sub>E</sub>X, but are not able to contribute in any of these ways
 
 1. [Set up the project.](#how-to-set-up-the-project)
 2. Implement your changes.
-3. Use commit messages in the following form: First line in imperative, first letter upper case, no trailing period, maximum 50 characters. Second line is blank. Additional information (if any) is in third and following lines. If the change is related to an issue, use `See #1234.` or `Fixes #1234.` as a separate final paragraph.
+3. Use commit messages according to [commitlint](https://github.com/conventional-changelog/commitlint/#what-is-commitlint).
 4. Check if the project builds: `mvn verify`.
 5. Open a pull request with the `develop` branch as the target branch.
 6. If the GitHub Actions CI reports any errors, fix them.
